@@ -27,10 +27,9 @@ const config: StorybookConfig = {
       }),
     ];
     config.module!.rules!.push({
-      test: /\.tsx?$/,
+      test: /\.(ts|tsx)?$/,
       loader: "ts-loader",
       options: { configFile: "tsconfig.json" },
-      exclude: /node_modules/,
     });
     return config;
   },
