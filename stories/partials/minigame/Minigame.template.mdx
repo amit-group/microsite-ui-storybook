@@ -1,0 +1,101 @@
+{/* MinigameTemplate.mdx */}
+
+import { Meta, Title, Subtitle, Description, Primary, Controls, Stories } from "@storybook/blocks";
+import { ConfigTable, TrackingConfigTable, TrackingDataTable, TrackingEventsTable, ArgumentTable } from "../../utils";
+
+{/*
+- 👇 The isTemplate property is required to tell Storybook that this is a template
+- See https://storybook.js.org/docs/react/api/doc-block-meta
+- to learn how to use
+*/}
+
+<Meta isTemplate />
+
+<Title />
+
+# Source Code
+
+<Primary />
+
+## MicrositeMinigame Constructor
+
+```
+new MicrositeMinigame(config)
+```
+<ArgumentTable>
+  <tr>
+    <td>config</td>
+    <td>`MicrositeMinigameConfig`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Configuration for MicrositeMinigame. </td>
+  </tr>
+</ArgumentTable>
+
+---
+
+## MicrositeMinigameConfig
+
+<ConfigTable>
+  <tr>
+    <td>popupEl</td>
+    <td>`Node | string`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Popup's node object or selector</td>
+  </tr>
+  <tr>
+    <td>toggleEl</td>
+    <td>`Node | string`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Toggle's node object or selector</td>
+  </tr>
+  <tr>
+    <td>toggleConfig</td>
+    <td>[MicrositeToggleConfig](/docs/partials-toggle--docs#micrositetoggleconfig)</td>
+    <td></td>
+    <td></td>
+    <td>Toggle's configuration</td>
+  </tr>
+  <tr>
+    <td>onOpen</td>
+    <td>`(minigame) => void`</td>
+    <td></td>
+    <td></td>
+    <td>Custom callback for Popup's open event.</td>
+  </tr>
+  <tr>
+    <td>onClose</td>
+    <td>`(minigame) => void`</td>
+    <td></td>
+    <td></td>
+    <td>Custom callback for Popup's close event.</td>
+  </tr>
+  <tr>
+    <td>tracking</td>
+    <td>`MicrositeTrackingConfig`</td>
+    <td></td>
+    <td>`{}`</td>
+    <td>Configuration for Tracking</td>
+  </tr>
+</ConfigTable>
+
+---
+
+## MicrositeTrackingConfig
+<TrackingConfigTable />
+
+--- 
+
+## MicrositeTrackingEvents
+<TrackingEventsTable events={['toggleClick']} />
+
+---
+
+## MicrositeTrackingData
+<TrackingDataTable />
+
+---
+
+<Stories />

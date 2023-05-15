@@ -1,0 +1,129 @@
+{/* ModalGalleryTemplate.mdx */}
+
+import { Meta, Title, Subtitle, Description, Primary, Controls, Stories } from "@storybook/blocks";
+import { ConfigTable, TrackingConfigTable, TrackingDataTable, TrackingEventsTable, ArgumentTable } from "../../utils";
+
+{/*
+- 👇 The isTemplate property is required to tell Storybook that this is a template
+- See https://storybook.js.org/docs/react/api/doc-block-meta
+- to learn how to use
+*/}
+
+<Meta isTemplate />
+
+<Title />
+
+# Source Code
+
+<Primary />
+
+## MicrositeModalGallery Constructor
+
+```
+new MicrositeModalGallery(element, config)
+```
+<ArgumentTable>
+  <tr>
+    <td>element</td>
+    <td>`HTML Element | String`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Modal's element or selector</td>
+  </tr>
+  <tr>
+    <td>config</td>
+    <td>`MicrositeModalGalleryConfig`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Configuration for MicrositeModalGallery. </td>
+  </tr>
+</ArgumentTable>
+
+---
+
+## MicrositeModalGalleryConfig
+
+<ConfigTable>
+  <tr>
+    <td>data</td>
+    <td>`MicrositeModalGalleryData[]`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Show/hide custom controls like Play, Replay, Mute/Unmute buttons</td>
+  </tr>
+  <tr>
+    <td>carouselEl</td>
+    <td>`HTMLDivElement | string`</td>
+    <td></td>
+    <td></td>
+    <td>Selector or element for carousel</td>
+  </tr>
+  <tr>
+    <td>carouselConfig</td>
+    <td>`MicrositeCarouselConfig`</td>
+    <td></td>
+    <td></td>
+    <td>Carousel's config</td>
+  </tr>
+  <tr>
+    <td>tracking</td>
+    <td>`MicrositeTrackingConfig`</td>
+    <td></td>
+    <td>`{}`</td>
+    <td>Configuration for Tracking</td>
+  </tr>
+</ConfigTable>
+
+---
+
+## MicrositeModalGalleryData
+
+<ConfigTable>
+  <tr>
+    <td>id</td>
+    <td>`string | number`</td>
+    <td>Required</td>
+    <td></td>
+    <td>ID of gallery. Used to detect folder images if don't provide images.</td>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td>`string`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Title will show on ModalGallery</td>
+  </tr>
+  <tr>
+    <td>description</td>
+    <td>`string`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Description will show on Modal Gallery</td>
+  </tr>
+  <tr>
+    <td>images</td>
+    <td>`string[]`</td>
+    <td></td>
+    <td></td>
+    <td>Gallery's Image URLs will generate with format `/{id}/{1-4}.png`. If you put images in different folders, you must list their URLs in `images` property.</td>
+  </tr>
+</ConfigTable>
+
+---
+
+## MicrositeTrackingConfig
+<TrackingConfigTable />
+
+--- 
+
+## MicrositeTrackingEvents
+<TrackingEventsTable events={['modalClickThumb', 'modalClickClose']} />
+
+---
+
+## MicrositeTrackingData
+<TrackingDataTable />
+
+---
+
+<Stories />

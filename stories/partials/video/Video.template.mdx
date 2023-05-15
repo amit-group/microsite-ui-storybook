@@ -1,0 +1,115 @@
+{/* VideoTemplate.mdx */}
+
+import { Meta, Title, Subtitle, Description, Primary, Controls, Stories } from "@storybook/blocks";
+import { ConfigTable, TrackingConfigTable, TrackingDataTable, TrackingEventsTable, ArgumentTable } from "../../utils";
+
+{/*
+- 👇 The isTemplate property is required to tell Storybook that this is a template
+- See https://storybook.js.org/docs/react/api/doc-block-meta
+- to learn how to use
+*/}
+
+<Meta isTemplate />
+
+<Title />
+
+# Source Code
+
+<Primary />
+
+## MicrositeVideo Constructor
+
+```
+new MicrositeVideo(element, config)
+```
+<ArgumentTable>
+  <tr>
+    <td>element</td>
+    <td>`HTML Element | String`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Video's element or selector</td>
+  </tr>
+  <tr>
+    <td>config</td>
+    <td>`MicrositeVideoConfig`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Configuration for MicrositeVideo. </td>
+  </tr>
+</ArgumentTable>
+
+---
+
+## MicrositeVideoConfig
+
+<ConfigTable>
+  <tr>
+    <td>customControl</td>
+    <td>`boolean | MicrositeVideoControlConfig`</td>
+    <td>Required</td>
+    <td>`true`</td>
+    <td>Show/hide custom controls like Play, Replay, Mute/Unmute buttons</td>
+  </tr>
+  <tr>
+    <td>tracking</td>
+    <td>`MicrositeTrackingConfig`</td>
+    <td></td>
+    <td>`{}`</td>
+    <td>Configuration for Tracking</td>
+  </tr>
+</ConfigTable>
+
+---
+
+## MicrositeVideoControlConfig
+
+<ConfigTable>
+  <tr>
+    <td>play</td>
+    <td>`boolean | { image: any }`</td>
+    <td></td>
+    <td></td>
+    <td>Show custom play button. Can overwrite default image by `image` property.</td>
+  </tr>
+  <tr>
+    <td>replay</td>
+    <td>`boolean | { image: any }`</td>
+    <td></td>
+    <td></td>
+    <td>Show custom play button. Can overwrite default image by `image` property.</td>
+  </tr>
+  <tr>
+    <td>soundOn</td>
+    <td>`boolean | { image: any }`</td>
+    <td></td>
+    <td></td>
+    <td>Show custom soundOn button. Can overwrite default image by `image` property.</td>
+  </tr>
+  <tr>
+    <td>soundOff</td>
+    <td>`boolean | { image: any }`</td>
+    <td></td>
+    <td></td>
+    <td>Show custom soundOff button. Can overwrite default image by `image` property.</td>
+  </tr>
+</ConfigTable>
+
+---
+
+## MicrositeTrackingConfig
+<TrackingConfigTable />
+
+--- 
+
+## MicrositeTrackingEvents
+<TrackingEventsTable events={['videoPlay', 'videoReplay', 'videoPause', 'videoSoundOff', 'videoSoundOn']} />
+
+---
+
+## MicrositeTrackingData
+<TrackingDataTable />
+
+---
+
+<Stories />

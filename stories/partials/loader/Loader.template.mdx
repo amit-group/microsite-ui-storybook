@@ -1,0 +1,61 @@
+{/* LoaderTemplate.mdx */}
+
+import { Meta, Title, Subtitle, Description, Primary, Controls, Stories } from "@storybook/blocks";
+import { ConfigTable, TrackingConfigTable, TrackingDataTable, TrackingEventsTable, ArgumentTable } from "../../utils";
+
+{/*
+- 👇 The isTemplate property is required to tell Storybook that this is a template
+- See https://storybook.js.org/docs/react/api/doc-block-meta
+- to learn how to use
+*/}
+
+<Meta isTemplate />
+
+<Title />
+
+# Source Code
+
+<Primary />
+
+## MicrositeLoader Constructor
+
+```
+new MicrositeLoader(element, config)
+```
+<ArgumentTable>
+  <tr>
+    <td>element</td>
+    <td>`Node | string`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Loader's element or string</td>
+  </tr>
+  <tr>
+    <td>config</td>
+    <td>`MicrositeLoaderConfig`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Configuration for MicrositeLoader. </td>
+  </tr>
+</ArgumentTable>
+
+---
+
+## MicrositeLoaderConfig
+
+<ConfigTable>
+  <tr>
+    <td>timeout</td>
+    <td>`number`</td>
+    <td>Required</td>
+    <td>1000</td>
+    <td>Loader timeout (ms)</td>
+  </tr>
+  <tr>
+    <td>animationDuration</td>
+    <td>`number`</td>
+    <td>Required</td>
+    <td>1000</td>
+    <td>Animation Duration (ms)</td>
+  </tr>
+</ConfigTable>

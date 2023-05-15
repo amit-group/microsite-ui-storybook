@@ -1,0 +1,80 @@
+{/* ToggleTemplate.mdx */}
+
+import { Meta, Title, Subtitle, Description, Primary, Controls, Stories } from "@storybook/blocks";
+import { ConfigTable, TrackingConfigTable, TrackingDataTable, TrackingEventsTable, ArgumentTable } from "../../utils";
+
+{/*
+- 👇 The isTemplate property is required to tell Storybook that this is a template
+- See https://storybook.js.org/docs/react/api/doc-block-meta
+- to learn how to use
+*/}
+
+<Meta isTemplate />
+
+<Title />
+
+# Source Code
+
+<Primary />
+
+## MicrositeToggle Constructor
+
+```
+new MicrositeToggle(element, config)
+```
+<ArgumentTable>
+  <tr>
+    <td>element</td>
+    <td>`HTML Element | NodeListOf<HTMLElement> | String`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Toggle's element(s) or selector</td>
+  </tr>
+  <tr>
+    <td>config</td>
+    <td>`MicrositeToggleConfig`</td>
+    <td>Required</td>
+    <td></td>
+    <td>Configuration for MicrositeToggle. </td>
+  </tr>
+</ArgumentTable>
+
+---
+
+## MicrositeToggleConfig
+
+<ConfigTable>
+  <tr>
+    <td>onClick</td>
+    <td>`(event, toggle) => void`</td>
+    <td></td>
+    <td></td>
+    <td>Callback for Toggle's click event</td>
+  </tr>
+  <tr>
+    <td>tracking</td>
+    <td>`MicrositeTrackingConfig`</td>
+    <td></td>
+    <td>`{}`</td>
+    <td>Configuration for Tracking</td>
+  </tr>
+</ConfigTable>
+
+---
+
+## MicrositeTrackingConfig
+<TrackingConfigTable />
+
+--- 
+
+## MicrositeTrackingEvents
+<TrackingEventsTable events={['toggleClick']} />
+
+---
+
+## MicrositeTrackingData
+<TrackingDataTable />
+
+---
+
+<Stories />
