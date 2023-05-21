@@ -151,7 +151,7 @@ export const GalleryWithToggle = (args) => {
 
 GalleryWithToggle.play = ({ canvasElement, args }) => {
   const modalEl = canvasElement.querySelector(".modal") as HTMLDivElement;
-  const toggle = canvasElement.querySelectorAll(".am-gallery-toggle");
+  const toggleEls = canvasElement.querySelectorAll(".am-gallery-toggle");
   new MicrositeGallery({
     modalEl,
     modalConfig: {
@@ -161,7 +161,7 @@ GalleryWithToggle.play = ({ canvasElement, args }) => {
         category: "Engagement",
       },
     },
-    toggleEl: toggle,
+    toggleEl: toggleEls,
     toggleConfig: {
       tracking: "Gallery Toggle",
       category: "Engagement",
@@ -199,7 +199,7 @@ GalleryWithToggle.parameters = {
   </div>
 </div>
 <script>
-  const toggleEl = document.querySelector('.am-gallery-toggle');
+  const toggleEls = document.querySelectorAll('.am-gallery-toggle');
   const modalEl = document.querySelector('.am-gallery-modal');
   new MicrositeGallery({
     modalEl,
@@ -210,7 +210,7 @@ GalleryWithToggle.parameters = {
         category: "Engagement"
       }
     },
-    toggleEl: toggle,
+    toggleEl: toggleEls,
     toggleConfig: {
       tracking: "Gallery Toggle",
       category: "Engagement"
